@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "createdAt": {
+      "type": "datetime"
+    },
+    "updatedAt": {
+      "type": "datetime",
+      "private": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "category": {
+      "model": "category"
+    }
+  }
+}
